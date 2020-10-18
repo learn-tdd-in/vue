@@ -19,5 +19,9 @@ describe("NewMessageForm", () => {
       const { value } = wrapper.find("[data-test='messageText']").element;
       expect(value).toEqual("");
     });
+
+    it("emits the 'send' event", () => {
+      expect(wrapper.emitted().send[0]).toEqual(["New message"]);
+    });
   });
 });

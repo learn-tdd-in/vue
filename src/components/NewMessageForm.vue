@@ -24,6 +24,7 @@ export default {
   },
   methods: {
     send() {
+      this.$emit("send", this.inputText);
       this.inputText = "";
     }
   },
